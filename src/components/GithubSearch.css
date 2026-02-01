@@ -59,8 +59,42 @@ body {
     cursor: pointer;
     box-shadow: 0 16px 30px -10px rgba(0,0,0,0.2);
 }
+.reset-btn {
+    width: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: #d9534f;
+    color: #fefefe;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 16px 30px -10px rgba(0,0,0,0.2);
+    margin-left: 10px;
+}
 .error-msg {
     font-size: 20px;
+}
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #20428a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 .profile-container {
     width: 720px;
@@ -156,6 +190,52 @@ a.profile-username {
     text-decoration: none;
     border-radius: 20px;
     box-shadow: 0 16px 30px -10px rgba(0,0,0,0.2);
+}
+/* Reset Button Styling */
+.reset-btn {
+    width: 80px;
+    padding: 15px;
+    border: none;
+    background-color: #697c9a;
+    color: #fefefe;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reset-btn:hover {
+    background-color: #4b6a9b;
+}
+
+/* Loading Message Styling */
+.loading-msg {
+    font-size: 22px;
+    color: #0079ff;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Search Button Disabled State */
+.search-btn:disabled {
+    background-color: #4b6a9b;
+    cursor: not-allowed;
+    opacity: 0.7;
 }
 .profile-url {
     background-color: #141d2f;
